@@ -24,10 +24,15 @@ Typescript, Angular2
   - A Component is the building block of an Angular application. It lets us create a new HTML language of custom tags and link them with javascript classes which describe the behaviour of that tag.
   - An application is composed of a tree of such Components glued together all depending from one root component. 
   - We package together related Components and supporting code into something called an Angular Module which we use to bootstrap Angular onto a webpage.
-
-
-
-
+- moustache syntax: {{ }} contains JavaScript which is run by Angular and the output inserted in the HTML.
+- Directive: structural directive since it changes the structure of the DOM
+- When we declare an array in TypeScript we also tell it what Type of thing the array holds using Type\[] or the Array<Type> syntax.
+- We can repeat the same element multiple times in Angular using the *NgFor directive
+  
+- HTML attribute & DOM property: Angular doesn’t manipulate HTML attributes, it manipulates DOM properties because the DOM is what actually gets displayed.
+- Input Property Binding: The target inside \[] is the name of the property.
+- Output Event Binding: The target inside the () is an event we want to listen for
+ 
 
 
 
