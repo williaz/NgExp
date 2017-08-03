@@ -59,6 +59,52 @@ Typescript, Angular2
 - By default that variable is only visible in the template that it’s declared in and points to the DOM element it’s attached to.
 
 
+### TypeScript
+- IIFE: Immediately Invoked Function Expression
+```js
+function hello() {
+var a = "function";
+for (var i=0; i<5; i++) {
+(function() {
+var a = "block";
+})();
+}
+console.log(a);
+}
+hello();
+
+function something() {
+var a = "block";
+}
+something();
+```
+- let
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
