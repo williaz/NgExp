@@ -59,7 +59,7 @@ Typescript, Angular2
 - By default that variable is only visible in the template that it’s declared in and points to the DOM element it’s attached to.
 
 
-### TypeScript
+### ES&TypeScript
 - IIFE: Immediately Invoked Function Expression
 ```js
 function hello() {
@@ -79,26 +79,77 @@ var a = "block";
 something();
 ```
 - let
+- const
+  - must be immediately initialised -> syntax error
+  - block-scoped
+  - The important gotcha with const is that the variable is immutable, but not the value, the thing the variable points to.
+  - using ```Object.freeze(…)``` -> no error, else "use strict" mode to throw SyntaxError
+
+- Multi-Line Strings: using the back-tick character `
+- expand variables using the ${variable_name} syntax
+
+- JavaScript has first class functions.
+- fat arrow(=>): to define anonymous functions
+  - solved the thorny issue of stabilising the value of this
+
+- this:
+  - the value of this in a function depends on how the function is called.
+  - if we use fat arrow functions the value of this inside a fat arrow function will be the same as the value of this outside the fat arrow function.
+
+- Destructuring is a way of extracting values into variables from data stored in objects and arrays.
+  - object
+  - array
+  - function: define the function parameter list as an object destructure pattern
+```js
+const {first: f} = obj; 
+// translates to extract the property first and store in a constant called f.
+const {first, last} = obj;
+const [x, y] = arr;
+
+function f({x=2}) { //default value
+console.log(x); // Refer to x directly
+}
+f({x:1});//1
+f({});//0
+```
+- For
+- ForEach: no break, continue, or return
+- For In: for iterating over an objects properties -> string
+- For of
+  - array, Set, Map
+  - It works with break, continue, and return
+
+- Map
+  - initialize use set() (chainable) or an array of pairs, 
+  - loop: keys(), values(), entry()
+  - record the insert order
+```js
+let map = new Map([
+[ "A", 1 ],
+[ "B", 2 ],
+[ "C", 3 ]
+]);
+
+for (let [key, value] of map.entries()) {
+console.log(key, value);
+}
+```
+- Set
+  - initialize use add() (chainable) or an array
 
 
+```js
+let set = new Set(['APPLE', 'ORANGE', 'MANGO']);
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Promise
+  - A promise is a placeholder for a future value.
+  - Inside this inner function we perform our asynchronous processing and then when we are ready we call resolve()
+  - If there was an error in the async task then we call the reject() function
+  - to get notified: then() can take two arguments, the second argument is a error handler that gets called if the promise is rejected
+  - if we add a then handler after the promise resolves or rejects the handler still gets called.
+  - Promises pass an error along the chain till it finds an error handler.
+  - The catch function works exactly the same way as the then error handler, it’s just clearer and more explicitly describes our intent to handle errors.
 
 
 
