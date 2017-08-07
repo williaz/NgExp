@@ -151,6 +151,42 @@ let set = new Set(['APPLE', 'ORANGE', 'MANGO']);
   - Promises pass an error along the chain till it finds an error handler.
   - The catch function works exactly the same way as the then error handler, it’s just clearer and more explicitly describes our intent to handle errors.
 
+- Interface
+  - We can append ? to the name of the property or function to mark it as optional
+
+- Decorators
+  - With decorators we can configure and customise our classes at design time.
+  - They are just functions that can be used to add meta-data, properties or functions to the thing they are attached to.
+
+- Module
+  - TS transpile to ES5 -> CommonJS module loading system
+  - export: says which of those functions can be exported, and therefore imported and used in other modules.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
