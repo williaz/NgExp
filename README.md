@@ -161,7 +161,11 @@ let set = new Set(['APPLE', 'ORANGE', 'MANGO']);
 - Module
   - TS transpile to ES5 -> CommonJS module loading system
   - export: says which of those functions can be exported, and therefore imported and used in other modules.
-
+  - use that destructuring syntax to import/export
+```js
+import {square as sqr} from './utils';
+import * as utils from './utils';
+```
 
 
 
