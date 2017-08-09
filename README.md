@@ -166,7 +166,9 @@ let set = new Set(['APPLE', 'ORANGE', 'MANGO']);
 import {square as sqr} from './utils';
 import * as utils from './utils';
 ```
-
+- ``` ng g <scaffold> <name>``` 
+  - the generate command will create files relative to the current folder you are in
+  - Available Scaffolds: component, directive, pipe, service, class, interface, enum
 
 
 
