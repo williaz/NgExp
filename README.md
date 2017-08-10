@@ -171,12 +171,25 @@ import * as utils from './utils';
   - Available Scaffolds: component, directive, pipe, service, class, interface, enum
 
 
+### Component
+- An Angular application is just a tree of Components, when each Component renders, it recursively renders its children Components.
 
+#### architect
+- list the input and output for each component to find its boundary
+- with one way data binding, inputs go down the tree, outputs go up the tree.
+#### properties
+- templateUrl
+- The styles property takes an array of strings, each string can contain any number of CSS declarations.
+- View Encapsulation
+  - (default) Any styles we define on a component don’t leak out to the rest of the application but with ViewEncapsulation.Emulated the component still inherits global styles
+  - ViewEncapsulation.Native: 
+    - use the shadow DOM
+    - no inheriting global styles
+    - do not leak outside of the components scope
+  - ViewEncapsulation.None: as global style
+- styleUrls: takes an array of css files
 
-
-
-
-
+#### Content projection
 
 
 
