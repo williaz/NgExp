@@ -193,12 +193,24 @@ import * as utils from './utils';
 
 
 
+#### Lifecycle Hooks
+- Hooks for the component
+  - constructor: This is invoked when Angular creates a component or directive by calling new on the class.
+  - ngOnChanges: Invoked every time there is a change in one of th input properties of the component.
+  - ngOnInit: Invoked when given component has been initialized. 
+    - This hook is only called once after the first ngOnChanges
+    - The best place to initialise your components is in the ngOnInit lifecycle hook and not the constructor because only at this point have any input property bindings been processed.
+  - ngDoCheck: Invoked when the change detector of the given component is invoked. 
+    - It allows us to implement our own change detection algorithm for the given component.
+    - ngDoCheck and ngOnChanges should not be implemented together on the same component.
+  - ngOnDestroy: This method will be invoked just before Angular destroys the component.
+    - Use this hook to unsubscribe observables and detach event handlers to avoid memory leaks.
 
-
-
-
-
-
+- Hooks for the components children: only called for components and not directives.
+  - ngAfterContentInit: Invoked after Angular performs any content projection into the components view
+  - ngAfterContentChecked: Invoked each time the content of the given component has been checked by the change detection mechanism of Angular.
+  - ngAfterViewInit: Invoked when the component’s view has been fully initialized.
+  - ngAfterViewChecked: Invoked each time the view of the given component has been checked by the change detection mechanism of Angular.
 
 
 
