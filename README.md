@@ -213,8 +213,9 @@ import * as utils from './utils';
   - ngAfterViewChecked: Invoked each time the view of the given component has been checked by the change detection mechanism of Angular.
 
 
-
-
+### HTTP
+- import HttpModule and add it to the imports list in root NgModule,
+- import { Headers, RequestOptions } from '@angular/http';
 
 
 
