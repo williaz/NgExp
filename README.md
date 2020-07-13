@@ -47,6 +47,15 @@ https://angular.io/guide/component-interaction
 https://angular.io/guide/component-interaction
   
 
+### Routing
+https://angular.io/guide/glossary#router
+
+- In a single-page app, instead of loading new pages, you show different components and data to the user based on where the user is in the application.
+- The router lets you display full product details in separate views, each with its own URL. Routing enables navigation from one view to the next
+- app.modules.ts: A route associates one or more URL paths with a component.
+- The **RouterLink** directive gives the router control over the anchor element.
+- The **ActivatedRoute** is specific to each routed component that the Angular Router loads. It contains information about the route, its parameters, and additional data associated with the route.
+
 
 
 
