@@ -52,9 +52,37 @@ https://angular.io/guide/glossary#router
 
 - In a single-page app, instead of loading new pages, you show different components and data to the user based on where the user is in the application.
 - The router lets you display full product details in separate views, each with its own URL. Routing enables navigation from one view to the next
-- app.modules.ts: A route associates one or more URL paths with a component.
+- app.modules.ts: A route associates one or more URL paths with a component
 - The **RouterLink** directive gives the router control over the anchor element.
 - The **ActivatedRoute** is specific to each routed component that the Angular Router loads. It contains information about the route, its parameters, and additional data associated with the route.
+
+
+### Service
+- a service is an instance of a class that you can make available to any part of your application using Angular's **dependency injection** system.
+- Services are the place where you **share data** between parts of your application - Components. 
+
+https://angular.io/guide/architecture-services
+
+### Pipes
+- A pipe is a way you can transform data in your HTML template
+
+https://angular.io/guide/pipes
+
+### HttpClient
+- Angular's HttpClientModule registers the providers your app needs to use a **single instance** of the HttpClient service throughout your app.
+
+- app.modules.ts
+  - This file contains imports and functionality that is available to the entire app.
+  - Add HttpClientModule to the AppModule @NgModule() imports array to register Angular's HttpClient providers **globally**
+
+https://angular.io/guide/http
+
+- The async pipe returns the latest value from a stream of data and **continues** to do so for the life of a given component.
+
+
+
+
+
 
 
 
