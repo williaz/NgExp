@@ -79,8 +79,9 @@ https://angular.io/guide/http
 
 - The async pipe returns the latest value from a stream of data and **continues** to do so for the life of a given component.
 
-
-
+### form validating
+-  Angular uses validation directives to match these attributes with validator functions in the framework.
+- NgModel: Creates a FormControl instance from a domain model and binds it to a form control element.
 
 
 
